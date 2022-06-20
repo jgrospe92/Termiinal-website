@@ -1,0 +1,166 @@
+* {
+    font-family: 'Source Code Pro', 'cursor',  monospace;
+}
+
+:root {
+    --light-dark : #211D1B;
+    --green : #519975;
+    --light-blue : #7dcdf9;
+    --dirty-whited : #DCDCCC;
+    --light-brown : #B89076;
+    --white : #fff;
+    --purple : #9C6394;
+    --black : #211830;
+}
+
+body {
+    margin: 0;
+    padding: 15px 20px;
+    min-height: 99%;
+    width: 100%;
+    min-width: 550px;
+    color: var(--green);
+    background: var(--light-dark);
+    overflow: hidden;
+}
+
+::selection {
+    color: var(--light-dark);
+    background-color: var(--green);
+}
+
+::-moz-selection {
+    color: var(--light-dark);
+    background-color: var(--green);
+}
+
+textarea {
+    left: -1000px;
+    position: absolute;
+}
+
+b {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* CURSOR */
+.cursor {
+    font-size: 12px;
+    color: var(--light-blue);
+    background-color: var(--light-blue);
+    position: relative;
+    opacity: 1;
+    height: 1.5em;
+    width: 0.2em;
+    max-width: 10px;
+    transform: translateY(4px);
+    overflow: hidden;
+    text-indent: -5px;
+    display: inline-block;
+    text-decoration: blink;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50%{
+        opacity: 0;
+    }
+}
+
+#command {
+    cursor : text;
+    height: 50px;
+    color: var(--light-blue);
+
+}
+
+#liner {
+    line-height: 1.3em;
+    margin-top: -2px;
+    animation: show 0.5s ease forward;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+#liner::before {
+    color: var(--green);
+    content: "guest@CodeWithJeff.com:~$";
+}
+
+#liner.password::before {
+    content: "Password";
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+/* CURSOR END */
+
+p {
+    display: block;
+    line-height: 1.3em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    animation: typing 0.5s steps(30, end);
+}
+
+.no-animation {
+    animation: typing 0 steps(30,end);
+}
+
+.margin {
+    margin-left: 20px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.index {
+    color: var(--dirty-whited);
+}
+
+.color2 {
+    color: var(--light-brown);
+}
+
+.command {
+    color: var(--light-blue);
+}
+
+.error {
+    color: var(--light-brown);
+}
+
+.white {
+    color: var(--white)
+}
+
+.inherit, a {
+    color : var(--purple)
+}
+
+a {
+    text-decoration:  inherit;
+}
+a:hover {
+    background-color: var(--light-blue);
+    color: var(--black);
+}
+a:focus {
+    outline: 0;
+}

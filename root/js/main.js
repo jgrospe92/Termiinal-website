@@ -1,4 +1,4 @@
-var time = document.getElementById('time');
+
 
 var before = document.getElementById('before');
 var liner = document.getElementById('liner');
@@ -11,19 +11,22 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
-// TIME
-var today = new Date();
-
-(function currentTime() {
-    let date = new Date().toLocaleTimeString();
-    time.innerText = date;
-    setTimeout(function () { currentTime() }, 1000);
-}())
 
 setTimeout(function () {
     loopLines(banner, "", 80);
     textarea.focus();
 }, 100);
+
+// TIME
+var timeToday = document.getElementById('index');
+var today = new Date();
+console.log(timeToday);
+
+(function currentTime() {
+    let date = new Date().toLocaleTimeString();
+    timeToday.innerText = date;
+    setTimeout(function () { currentTime() }, 1000);
+}())
 
 window.addEventListener('keyup', enterKey);
 console.log(

@@ -1,2 +1,2 @@
 # Termiinal-website
- Terminal inspired website porfolio
+A terminal Cyber punk inspired website

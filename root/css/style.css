@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 15px 20px;
     min-height: 99%;
-    width: 100%;
-    min-width: 550px;
+    width: 100vh;
+    /* min-width: 550px; */
     color: #519975;
     background: #211D1B;
     font-family: cursor, monospace;
@@ -128,4 +128,13 @@ body {
   }
   a:focus {
     outline: 0;
+  }
+
+  /* media query */
+
+  @media only screen and (max-width: 600) {
+    
+    body {
+      width: 100%;
+    }
   }

@@ -85,19 +85,54 @@ help = [
   "<br>",
 ];
 
-banner = [
-  '<span class="index">ForrestKnight (FK) Not A Corporation. All knights reserved.</span>',
-  "         ___   ____",
-  "       /' --;^/ ,-_\\     \\ | /       ",
-  "      / / --o\\ o-\\ \\\\   --(_)--   ",
-  "     /-/-/|o|-|\\-\\\\|\\\\   / | \\   ______                          __     __ __       _       __    __   ",
-  "      '`  ` |-|   `` '          / ____/___  _____________  _____/ /_   / //_/____  (_)___ _/ /_  / /_ ",
-  "            |-|                / /_  / __ \\/ ___/ ___/ _ \\/ ___/ __/  / ,<  / __ \\/ / __ `/ __ \\/ __/ ",
-  "            |-|O              / __/ / /_/ / /  / /  /  __(__  ) /_   / /| |/ / / / / /_/ / / / / /_  ",
-  "            |-(\\,__          /_/    \\____/_/  /_/   \\___/____/\\__/  /_/ |_/_/ /_/_/\\__, /_/ /_/\\__/ ",
-  "         ...|-|\\--,\\_....                                                         /____/    © 2022",
-  "      ,;;;;;;;;;;;;;;;;;;;;;;;;,.   ",
-  "~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
-  '<span class="color2">Welcome to my interactive web terminal.</span>',
-  '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
-];
+
+
+function checkScreenSize() {
+
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  console.log(screenWidth);
+  if (screenWidth <= 600){
+
+    let mobileBanner = [
+      `                    \\      /             _\\/_`,
+      "                     .-'-.              //o\\ _\\/_",
+      "  _  ___  __  _ --_ /     \\ _--_ __  __ _ | __/o\\ ",
+      `=-=-_=-=-_=-=_=-_= -=======- = =-=_=-=_,-'|"'""-|-,_ `,
+      ` =- _=-=-_=- _=-= _--=====- _=-=_-_,-"          |`,
+      `=- =- =-= =- = -  -===- -= - .`,
+      '<span class="color2">Welcome to my interactive web terminal.</span>',
+      '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
+    ];
+    return mobileBanner;
+  } else {
+    let DesktopBanner = [
+      `                 _____________   `,  
+      `                /             /|`,
+      `               /             / |`,
+      `              /____________ /  |`,
+      `             | ___________ |   |`,
+      `             ||           ||   |`,
+      `             || Hello     ||   |`,
+      `             ||   world   ||   |`,
+      `             ||___________||   |`,
+      `             ||   _______  |  /`,
+      `             /|  (_______) | /`,
+      `            ( |_____________|/`,
+      `            \\`,
+      `               .=======================.`,
+      `               | ::::::::::::::::  ::: |`,
+      `               | ::::::::::::::[]  ::: |`,
+      `               |   -----------     ::: |`,
+      `               '-----------------------'`,
+        '<span class="color2">Welcome to my interactive web terminal.</span>',
+        '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
+      
+      ];
+      return DesktopBanner;
+  }
+}
+
+// run the function on page load and when the window is resized
+window.addEventListener('load', () => {
+  banner = checkScreenSize();
+});

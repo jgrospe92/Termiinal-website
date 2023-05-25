@@ -9,6 +9,7 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
+
 setTimeout(function () {
   loopLines(banner, "", 80);
   textarea.focus();

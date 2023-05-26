@@ -15,6 +15,7 @@ A terminal Cyber punk inspired
 
 # Live Website
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a037b9b3-541f-4988-a1a2-f2aefc30963d/deploy-status)](https://app.netlify.com/sites/termiinal-website/deploys)
+---
 [Termiinal-website][4]
 
 <!-- LINKS -->

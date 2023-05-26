@@ -1,10 +1,8 @@
-var youtube = "https://www.youtube.com/fknight/";
-var twitter = "https://www.twitter.com/forrestpknight/";
-var password = "fkcodes";
-var linkedin = "https://www.linkedin.com/in/forrestpknight/";
-var instagram = "https://www.instagram.com/forrestpknight/";
-var github = "https://github.com/forrestknight/";
-var email = "mailto:forrest@fkcodes.com";
+
+var linkedin = "https://www.linkedin.com/in/jeffreygrospe/";
+var instagram = "https://www.instagram.com/jeffrey_grospe/";
+var github = "https://github.com/jgrospe92";
+var email = "mailto:jeffreygrospe@yahoo.com";
 
 whois = [
   "<br>",
@@ -37,25 +35,17 @@ joke = [
 
 social = [
   "<br>",
-  'youtube        <a href="' +
-    youtube +
-    '" target="_blank">youtube/fknight' +
-    "</a>",
-  'twitter        <a href="' +
-    twitter +
-    '" target="_blank">twitter/forrestpknight' +
-    "</a>",
   'linkedin       <a href="' +
     linkedin +
-    '" target="_blank">linkedin/forrestpknight' +
+    '" target="_blank">linkedin/jeffreygrospe' +
     "</a>",
   'instagram      <a href="' +
     instagram +
-    '" target="_blank">instagram/forrestpknight' +
+    '" target="_blank">instagram/jeffrey_grospe' +
     "</a>",
   'github         <a href="' +
     github +
-    '" target="_blank">github/forrestknight' +
+    '" target="_blank">github/jgrospe92' +
     "</a>",
   "<br>",
 ];

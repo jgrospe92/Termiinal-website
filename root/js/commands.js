@@ -9,17 +9,22 @@ var email = "mailto:forrest@fkcodes.com";
 whois = [
   "<br>",
   "Hi, my name is Jeffrey, and I'm a curious and ambitious programmer.👋",
-  "My fascination with technology began at a young age when I would spend hours playing games like Mortal Kombat, Metal Slug, and Super Mario at the nearest arcade in my home country.",
+  "My fascination with technology began at a young age when I would spend hours playing games like Mortal Kombat,",
+  " Metal Slug, and Super Mario at the nearest arcade in my home country.",
   "These experiences ignited my passion for video games and sparked my desire to explore the world of technology.",
-  "Fast forward to today, and I've already developed several games on my own. In addition to game development, I have built numerous applications for IoT, mobile, desktop, websites, and web services.",
+  "Fast forward to today, and I've already developed several games on my own. In addition to game development,",
+  "I have built numerous applications for IoT, mobile, desktop, websites, and web services.",
   " Programming challenges excite me, and I enjoy diving into different tech stacks to expand my knowledge and skills.",
-  "My ultimate goal is to become a great software engineer. I'm always eager to learn and grow, and I believe that the possibilities in this field are endless. Thank you for visiting my website, and please feel free to explore my projects.",
+  "My ultimate goal is to become a great software engineer.",
+  "I'm always eager to learn and grow, and I believe that the possibilities in this field are endless.",
+  "Thank you for visiting my website, and please feel free to explore my projects.",
   "<br>",
 ];
 
-whoami = [
+quote = [
   "<br>",
-  "The paradox of “Who am I?” is: we never know, but, we constantly find out.",
+  "Learn as if you will live forever, live like you will die tomorrow.",
+  "-Mahatma Gandhi",
   "<br>",
 ];
 
@@ -62,8 +67,8 @@ projects = [
 
 help = [
   "<br>",
-  '<span class="command">whois</span>          Who is Forrest?',
-  '<span class="command">whoami</span>         Who are you?',
+  '<span class="command">whois</span>          About me',
+  '<span class="command">quoteme</span>        Shows random quotes?',
   '<span class="command">video</span>          View YouTube videos',
   '<span class="command">social</span>         Display social networks',
   '<span class="command">secret</span>         Find the password',

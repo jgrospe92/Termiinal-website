@@ -11,7 +11,7 @@ body {
     min-height: 99%;
     width: 100% !important;
     overflow-wrap: anywhere !important;
-    overflow: hidden !important;
+  
     /* min-width: 550px; */
     color: #519975 !important;
     background: #211D1B !important;
@@ -89,7 +89,6 @@ body {
     display: block;
     line-height: 1.3em !important;
     margin: 0 !important;
-    overflow: hidden;
     white-space: nowrap;
     overflow-wrap: break-word !important;
     margin: 0 !important;
@@ -147,6 +146,11 @@ body {
   .format {
     color: red;
 
+  }
+
+  #terminal {
+    overflow: visible;
+    overflow-wrap: break-word;
   }
 
 

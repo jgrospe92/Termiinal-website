@@ -9,6 +9,40 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
+const fetchRandomQuotes = async () => {
+  let uri = "https://api.quotable.io/random";
+  const data = await getData(uri);
+  quote.splice(1,1,data.content)
+  quote.splice(2,2,"-" + data.author)
+  quote.push("<br>");
+}
+
+const getData = async (url) => {
+  // STEP 1 - Configure the request header
+  let response = null;
+  // STEP 2 - Create and init an HTTP request : GET | POST | DELETE
+  const myInit = {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  const request = new Request(url, myInit);
+
+  // STEP 3 - Now we can send the request using the fetch APi
+  try {
+    response = await fetch(request);
+
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    }
+  } catch (err) {
+    console.log(err);
+    return false;
+  }
+};
+
 
 setTimeout(function () {
   loopLines(banner, "", 80);
@@ -87,10 +121,12 @@ function commander(cmd) {
       loopLines(help, "color2 margin", 80);
       break;
     case "whois":
-      loopLines(whois, "color2 margin format text-wrap", 100);
+      loopLines(whois, "color2 margin format", 100);
       break;
-    case "whoami":
-      loopLines(whoami, "color2 margin", 80);
+    case "quoteme":
+      fetchRandomQuotes();
+      console.log(quote);
+      loopLines(quote, "color2 margin", 80);
       break;
     case "video":
       addLine("Opening YouTube...", "color2", 80);
@@ -182,7 +218,7 @@ function addLine(text, style, time) {
   var t = "";
   for (let i = 0; i < text.length; i++) {
     if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
-      // t += "&nbsp;&nbsp;";
+      t += "&nbsp;&nbsp;";
       i++;
     } else {
       t += text.charAt(i);

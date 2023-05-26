@@ -28,6 +28,13 @@ quote = [
   "<br>",
 ];
 
+joke = [
+  "<br>",
+  "My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.",
+  "<br>",
+];
+
+
 social = [
   "<br>",
   'youtube        <a href="' +
@@ -53,11 +60,6 @@ social = [
   "<br>",
 ];
 
-secret = [
-  "<br>",
-  '<span class="command">sudo</span>           Only use if you\'re admin',
-  "<br>",
-];
 
 projects = [
   "<br>",
@@ -68,10 +70,9 @@ projects = [
 help = [
   "<br>",
   '<span class="command">whois</span>          About me',
-  '<span class="command">quoteme</span>        Shows random quotes?',
-  '<span class="command">video</span>          View YouTube videos',
+  '<span class="command">quoteme</span>        show random quotes',
+  '<span class="command">dadjokes</span>       show random dad jokes',
   '<span class="command">social</span>         Display social networks',
-  '<span class="command">secret</span>         Find the password',
   '<span class="command">projects</span>       View coding projects',
   '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           You obviously already know what this does',

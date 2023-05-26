@@ -17,10 +17,14 @@ const fetchRandomQuotes = async () => {
   quote.push("<br>");
 }
 
+const fetchRandomDadJokes = async () => {
+  let uri = "https://icanhazdadjoke.com/";
+  const data = await getData(uri);
+  joke.splice(1,1,data.joke)
+}
+
 const getData = async (url) => {
-  // STEP 1 - Configure the request header
   let response = null;
-  // STEP 2 - Create and init an HTTP request : GET | POST | DELETE
   const myInit = {
     method: "GET",
     headers: {
@@ -51,14 +55,6 @@ setTimeout(function () {
 
 window.addEventListener("keyup", enterKey);
 
-console.log(
-  "%cYou hacked my password!😠",
-  "color: #04ff00; font-weight: bold; font-size: 24px;"
-);
-console.log(
-  "%cPassword: '" + password + "' - I wonder what it does?🤔",
-  "color: grey"
-);
 
 //init
 textarea.value = "";
@@ -76,12 +72,7 @@ function enterKey(e) {
       pwd = true;
     }
     if (pwd && e.keyCode == 13) {
-      loopLines(secret, "color2 margin", 120);
-      command.innerHTML = "";
-      textarea.value = "";
-      pwd = false;
-      pw = false;
-      liner.classList.remove("password");
+      return
     } else if (e.keyCode == 13) {
       addLine("Wrong password", "error", 0);
       command.innerHTML = "";
@@ -125,12 +116,11 @@ function commander(cmd) {
       break;
     case "quoteme":
       fetchRandomQuotes();
-      console.log(quote);
       loopLines(quote, "color2 margin", 80);
       break;
-    case "video":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
+    case "dadjokes":
+    fetchRandomDadJokes();
+    loopLines(joke, "color2 margin", 80);
       break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
@@ -141,19 +131,8 @@ function commander(cmd) {
     case "social":
       loopLines(social, "color2 margin", 80);
       break;
-    case "secret":
-      liner.classList.add("password");
-      pw = true;
-      break;
     case "projects":
       loopLines(projects, "color2 margin", 80);
-      break;
-    case "password":
-      addLine(
-        "<span class=\"inherit\"> Lol! You're joking, right? You're gonna have to try harder than that!😂</span>",
-        "error",
-        100
-      );
       break;
     case "history":
       addLine("<br>", "", 0);

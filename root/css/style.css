@@ -10,8 +10,6 @@ body {
     padding: 15px 20px !important;
     min-height: 99%;
     width: 100% !important;
-    overflow-wrap: anywhere !important;
-  
     /* min-width: 550px; */
     color: #519975 !important;
     background: #211D1B !important;
@@ -89,8 +87,8 @@ body {
     display: block;
     line-height: 1.3em !important;
     margin: 0 !important;
+    overflow: visible;
     white-space: nowrap;
-    overflow-wrap: break-word !important;
     margin: 0 !important;
     letter-spacing: 0.05em !important;
     animation: typing 0.5s steps(30, end);

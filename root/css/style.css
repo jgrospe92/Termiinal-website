@@ -1,13 +1,23 @@
+/* colors */
+:root{
+  --text-color : #519975;
+  --background-color :  #211D1B;
+  --blinking-cursor : #73ABAD;
+}
+
 body {
-    margin: 0;
-    padding: 15px 20px;
+    margin: 0 !important;
+    padding: 15px 20px !important;
     min-height: 99%;
-    width: 100vh;
+    width: 100% !important;
+    overflow-wrap: anywhere !important;
+    overflow: hidden !important;
     /* min-width: 550px; */
-    color: #519975;
-    background: #211D1B;
-    font-family: cursor, monospace;
-    overflow-x: hidden;
+    color: #519975 !important;
+    background: #211D1B !important;
+    font-family: cursor, monospace !important;
+
+
   }
   ::selection {
     color: #211830;
@@ -53,15 +63,15 @@ body {
     color: #73ABAD;
   }
   #liner {
-    line-height: 1.3em;
-    margin-top: -2px;
+    line-height: 1.3em !important;
+    margin-top: -2px !important;
     animation: show 0.5s ease forwards;
     animation-delay: 1.2s;
     opacity: 0;
   }
   #liner::before {
     color: #519975;
-    content: "visitor@fkcodes.com:~$";
+    content: "visitor:~$";
   }
   #liner.password::before {
     content: "Password:";
@@ -77,12 +87,13 @@ body {
   /* Cursor End */
   p {
     display: block;
-    line-height: 1.3em;
-    margin: 0;
+    line-height: 1.3em !important;
+    margin: 0 !important;
     overflow: hidden;
     white-space: nowrap;
-    margin: 0;
-    letter-spacing: 0.05em;
+    overflow-wrap: break-word !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em !important;
     animation: typing 0.5s steps(30, end);
   }
   .no-animation {
@@ -131,10 +142,17 @@ body {
   }
 
   /* media query */
+@media only screen and (max-width: 600px) {
 
-  @media only screen and (max-width: 600) {
-    
-    body {
-      width: 100%;
-    }
+  .format {
+    color: red;
+
   }
+
+
+  .cmdLine{
+    display: block;
+   
+  }
+
+}

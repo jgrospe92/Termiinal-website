@@ -8,21 +8,12 @@ var email = "mailto:forrest@fkcodes.com";
 
 whois = [
   "<br>",
-  "Hey, I'm Forrest!👋",
-  "I'm a software developer and content creator, who builds engaging websites like this one",
-  "and makes YouTube videos about computer science & software engineering.",
-  "After graduating with a Bachelor's in Computer Science, I worked professionally",
-  "as a software engineer building enterprise web applications for Fortune 500 companies.",
-  "While doing all of that, I documentned my coding journey on YouTube - trying to enlighten",
-  "the next generation of developers and help them navigate the crazy world that is software",
-  "development & computer science.",
-  "Before I knew it, that online presence took on a life of its own, to the point where I knew",
-  "I needed to make the jump from software engineering to full time content creator, and it's",
-  "the best decision I ever made.",
-  "Now, I make videos about creating cool shit like this terminal website, and hosting my",
-  "podcast 'Decoded w/ Forrest Knight.' What most people don't know, and will only know",
-  "because they're reading this right now, is that I also run a creative & media agency.",
-  "We partner with clients to drive their business outcomes using modern marketing strategies.",
+  "Hi, my name is Jeffrey, and I'm a curious and ambitious programmer.👋",
+  "My fascination with technology began at a young age when I would spend hours playing games like Mortal Kombat, Metal Slug, and Super Mario at the nearest arcade in my home country.",
+  "These experiences ignited my passion for video games and sparked my desire to explore the world of technology.",
+  "Fast forward to today, and I've already developed several games on my own. In addition to game development, I have built numerous applications for IoT, mobile, desktop, websites, and web services.",
+  " Programming challenges excite me, and I enjoy diving into different tech stacks to expand my knowledge and skills.",
+  "My ultimate goal is to become a great software engineer. I'm always eager to learn and grow, and I believe that the possibilities in this field are endless. Thank you for visiting my website, and please feel free to explore my projects.",
   "<br>",
 ];
 
@@ -91,7 +82,7 @@ function checkScreenSize() {
 
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   console.log(screenWidth);
-  if (screenWidth <= 600){
+  if (screenWidth <= 890){
 
     let mobileBanner = [
       `                    \\      /             _\\/_`,
@@ -100,32 +91,32 @@ function checkScreenSize() {
       `=-=-_=-=-_=-=_=-_= -=======- = =-=_=-=_,-'|"'""-|-,_ `,
       ` =- _=-=-_=- _=-= _--=====- _=-=_-_,-"          |`,
       `=- =- =-= =- = -  -===- -= - .`,
-      '<span class="color2">Welcome to my interactive web terminal.</span>',
-      '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
+      '<span class="color2 headerLine">Welcome to my interactive web terminal.</span>',
+      '<span class="color2 headerLine">For a list of available commands, type</span> <span class="command cmdLine">\'help\'',
     ];
     return mobileBanner;
   } else {
     let DesktopBanner = [
-      `                 _____________   `,  
-      `                /             /|`,
-      `               /             / |`,
-      `              /____________ /  |`,
-      `             | ___________ |   |`,
-      `             ||           ||   |`,
-      `             || Hello     ||   |`,
-      `             ||   world   ||   |`,
-      `             ||___________||   |`,
-      `             ||   _______  |  /`,
-      `             /|  (_______) | /`,
-      `            ( |_____________|/`,
-      `            \\`,
-      `               .=======================.`,
-      `               | ::::::::::::::::  ::: |`,
-      `               | ::::::::::::::[]  ::: |`,
-      `               |   -----------     ::: |`,
-      `               '-----------------------'`,
-        '<span class="color2">Welcome to my interactive web terminal.</span>',
-        '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
+      `    _____________   `,  
+      `   /             /|`,
+      `  /             / |`,
+      ` /____________ /  |`,
+      ` | ___________ |   |`,
+      ` ||           ||   |`,
+      ` || Hello     ||   |`,
+      ` ||   world   ||   |`,
+      ` ||___________||   |`,
+      ` ||   _______  |  /`,
+      ` /|  (_______) | /`,
+      `( |_____________|/`,
+      ` \\`,
+      `  .=======================.`,
+      `  | ::::::::::::::::  ::: |`,
+      `  | ::::::::::::::[]  ::: |`,
+      `  |   -----------     ::: |`,
+      `  '-----------------------'`,
+        '<span class="color2 text-wrap headerLine">Welcome to my interactive web terminal.</span>',
+        '<span class="color2 text-wrap headerLine">For a list of available commands, type</span> <span class="command cmdLine">\'help\'',
       
       ];
       return DesktopBanner;

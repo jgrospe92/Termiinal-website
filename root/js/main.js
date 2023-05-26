@@ -59,7 +59,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("visitor@fkcodes.com:~$ " + command.innerHTML, "no-animation", 0);
+      addLine("visitor:~$ " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
@@ -87,7 +87,7 @@ function commander(cmd) {
       loopLines(help, "color2 margin", 80);
       break;
     case "whois":
-      loopLines(whois, "color2 margin", 80);
+      loopLines(whois, "color2 margin format text-wrap", 100);
       break;
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
@@ -182,7 +182,7 @@ function addLine(text, style, time) {
   var t = "";
   for (let i = 0; i < text.length; i++) {
     if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
-      t += "&nbsp;&nbsp;";
+      // t += "&nbsp;&nbsp;";
       i++;
     } else {
       t += text.charAt(i);

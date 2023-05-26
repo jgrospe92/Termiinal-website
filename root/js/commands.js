@@ -53,7 +53,22 @@ social = [
 
 projects = [
   "<br>",
-  "Still curating... most projects are offline, on GitHub, or confidential.",
+  'crimes-api                         <a href="' +
+  github + '/crimes-api' +
+  '" target="_blank">github/crimes-api' +
+  "</a>",
+'js-client                          <a href="' +
+  github + '/js-client' +
+  '" target="_blank">github/js-client' +
+  "</a>",
+'IoT-PythonDashboard                <a href="' +
+  github + '/Iot-PythonDashboard' +
+  '" target="_blank">github/Iot-PythonDashboard' +
+  "</a>",
+  'OF-OnlyFriends-mobile-app          <a href="' +
+  github + '/OF-OnlyFriends' +
+  '" target="_blank">github/OF-OnlyFriends' +
+  "</a>",
   "<br>",
 ];
 
@@ -65,8 +80,8 @@ help = [
   '<span class="command">social</span>         Display social networks',
   '<span class="command">projects</span>       View coding projects',
   '<span class="command">history</span>        View command history',
-  '<span class="command">help</span>           You obviously already know what this does',
-  '<span class="command">email</span>          Do not email me',
+  '<span class="command">help</span>           View all available commmands',
+  '<span class="command">email</span>          My email',
   '<span class="command">clear</span>          Clear terminal',
   '<span class="command">banner</span>         Display the header',
   "<br>",
